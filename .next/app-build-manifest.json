@@ -1,0 +1,51 @@
+{
+  "pages": {
+    "/(home1)/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(home1)/page.css",
+      "static/chunks/app/(home1)/page.js"
+    ],
+    "/(home1)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(home1)/layout.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/(innerpage)/referrals/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(innerpage)/referrals/page.js"
+    ],
+    "/(innerpage)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(innerpage)/layout.js"
+    ],
+    "/(innerpage)/service/service-details/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(innerpage)/service/service-details/page.js"
+    ],
+    "/(innerpage)/service/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(innerpage)/service/page.js"
+    ],
+    "/(innerpage)/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(innerpage)/contact/page.js"
+    ],
+    "/(innerpage)/about/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(innerpage)/about/page.js"
+    ]
+  }
+}
