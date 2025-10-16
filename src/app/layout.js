@@ -8,11 +8,13 @@ const rubik = Rubik({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--body-font',
+  display: 'swap',
 });
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--heading-font',
+  display: 'swap',
 });
 
 export const metadata = {
