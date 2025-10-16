@@ -1,8 +1,8 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/(home1)/page": "app/(home1)/page.js",
-  "/(innerpage)/service/service-details/page": "app/(innerpage)/service/service-details/page.js",
+  "/(innerpage)/about/page": "app/(innerpage)/about/page.js",
   "/(innerpage)/service/page": "app/(innerpage)/service/page.js",
   "/(innerpage)/contact/page": "app/(innerpage)/contact/page.js",
-  "/(innerpage)/about/page": "app/(innerpage)/about/page.js",
   "/(innerpage)/referrals/page": "app/(innerpage)/referrals/page.js"
 }
