@@ -5,6 +5,7 @@ import Button from "../Buttons";
 import { FaAnglesRight } from "react-icons/fa6";
 import SectionHeading from "../SectionHeading";
 import VideoModal from "../VideoSection/Modal";
+import Image from "next/image";
 
 const MedicalSolutionSection = ({ data }) => {
   const [toggle, setToggle] = useState(false);
@@ -48,9 +49,11 @@ const MedicalSolutionSection = ({ data }) => {
                   </div>
                   <div className="col-md-6">
                     <div className="cs_solution_thumbnail_2" style={{maxWidth: "250px"}}>
-                      <img
+                      <Image
                         src={data.images.solutionImage}
                         alt="Solution Image"
+                        width={250}
+                        height={200}
                       />
                     </div>
                   </div>
@@ -89,7 +92,7 @@ const MedicalSolutionSection = ({ data }) => {
         </div>
       </div>
       <div className="cs_solution_shape position-absolute">
-        <img src={data.shapeImageUrl} alt="Shape" />
+        <Image src={data.shapeImageUrl} alt="Shape" width={155} height={102} />
       </div>
 
       <VideoModal

@@ -141,7 +141,7 @@ const HeroSection1 = ({ data }) => {
                     <button
                       type="button"
                       aria-label={`Go to slide ${idx + 1}`}
-                      aria-selected={isActive}
+                      aria-pressed={isActive}
                       onClick={() => goToSlide(idx)}
                     >
                       {/* Track + Fill (progress animates only on active) */}

@@ -25,13 +25,14 @@ const ReferralsPage = () => {
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -112,7 +113,7 @@ const ReferralsPage = () => {
                 <div className="col-lg-8 text-center">
                   <h2 className="referrals-title">Choose Your Referral Method</h2>
                   <p className="referrals-subtitle">
-                    Select how you'd like to submit your referral information
+                    Select how you&apos;d like to submit your referral information
                   </p>
                 </div>
               </div>
