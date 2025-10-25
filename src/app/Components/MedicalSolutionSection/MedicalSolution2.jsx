@@ -154,6 +154,18 @@ const MedicalSolution2 = ({ data }) => {
             max-width: 100%;
             height: auto;
           }
+          
+          .cs_expandable_item {
+            padding: 14px;
+          }
+          
+          .cs_expandable_header {
+            gap: 14px;
+          }
+          
+          .service-title {
+            font-size: 1rem;
+          }
         }
 
         @media (max-width: 767.98px) {
@@ -168,6 +180,7 @@ const MedicalSolution2 = ({ data }) => {
           
           .cs_expandable_item {
             padding: 12px;
+            margin-bottom: 8px;
           }
           
           .cs_expandable_header {
@@ -177,11 +190,26 @@ const MedicalSolution2 = ({ data }) => {
           .service-title {
             font-size: 0.9rem;
           }
+          
+          .cs_expandable_content {
+            padding: 12px;
+            font-size: 0.9rem;
+          }
         }
 
         @media (max-width: 575.98px) {
+          .cs_solution_thumbnail {
+            margin-top: 1rem;
+          }
+          
+          .cs_solution_thumbnail img {
+            width: 100%;
+            max-width: 350px;
+          }
+          
           .cs_expandable_item {
             padding: 10px;
+            margin-bottom: 6px;
           }
           
           .cs_expandable_header {
@@ -190,11 +218,22 @@ const MedicalSolution2 = ({ data }) => {
           
           .service-title {
             font-size: 0.85rem;
+            line-height: 1.3;
           }
           
           .cs_expandable_content {
-            padding: 12px;
-            font-size: 0.9rem;
+            padding: 10px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+          }
+          
+          .cs_tab_link_icon_left {
+            width: 20px;
+          }
+          
+          .cs_tab_link_icon_right {
+            width: 22px;
+            height: 22px;
           }
         }
       `}</style>

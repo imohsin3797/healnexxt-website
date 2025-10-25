@@ -38,7 +38,7 @@ const headingData = {
         index: "02",
         title: "Medical Care",
         subtitle: "Medical competitor research startup to financial",
-        icon: "/assets/img/icons/service_icon_2.png",
+        icon: "/assets/img/icons/service_icon_10.png",
         bgImage: "/assets/img/service_bg.jpg",
         link: "/",
       },

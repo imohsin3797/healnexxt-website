@@ -62,6 +62,19 @@ const CounterSection2 = ({ data }) => {
           gap: 0 !important;
         }
 
+        /* Mobile Responsive Grid */
+        @media (max-width: 991.98px) {
+          .counter2-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 575.98px) {
+          .counter2-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
         /* Card base – keep a transparent border to avoid layout shift */
         .counter2-item {
           padding: 60px 24px;
@@ -69,6 +82,52 @@ const CounterSection2 = ({ data }) => {
           border: 2px solid transparent;      /* invisible at rest */
           transition: color 160ms ease, border-color 160ms ease;
           cursor: pointer;
+        }
+
+        /* Mobile Responsive Padding and Text */
+        @media (max-width: 991.98px) {
+          .counter2-item {
+            padding: 40px 20px;
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          .counter2-item {
+            padding: 30px 16px;
+          }
+          
+          .counter2-item :global(.cs_counter_nmber) {
+            font-size: 2.5rem !important;
+            line-height: 1.2 !important;
+          }
+          
+          .counter2-item :global(.cs_counter_title) {
+            font-size: 1rem !important;
+            line-height: 1.3 !important;
+          }
+        }
+
+        @media (max-width: 575.98px) {
+          .counter2-item {
+            padding: 25px 20px;
+            text-align: center;
+          }
+          
+          .counter2-item :global(.cs_counter_nmber) {
+            font-size: 2.2rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+          
+          .counter2-item :global(.cs_counter_title) {
+            font-size: 0.95rem !important;
+            margin-bottom: 0 !important;
+          }
+          
+          .cs_counter_icon_mask {
+            width: 32px !important;
+            height: 32px !important;
+            margin-bottom: 1rem !important;
+          }
         }
 
         /* Ensure number/title inherit our hover color even if theme sets them */

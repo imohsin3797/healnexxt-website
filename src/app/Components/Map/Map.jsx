@@ -52,6 +52,131 @@ const Map = ({ data }) => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .cs_map_content {
+          text-align: left;
+        }
+
+        .cs_map_text {
+          color: var(--body-color);
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 30px;
+        }
+
+        .cs_location_item {
+          display: flex;
+          align-items: flex-start;
+          gap: 15px;
+          margin-bottom: 20px;
+        }
+
+        .cs_location_icon {
+          width: 40px;
+          height: 40px;
+          background-color: var(--accent-color);
+          border-radius: 50%;
+          color: #eadfd4;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .cs_location_title {
+          font-size: 18px;
+          font-weight: 600;
+          color: var(--heading-color);
+          margin-bottom: 5px;
+        }
+
+        .cs_location_address,
+        .cs_location_phone {
+          color: var(--body-color);
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 2px;
+        }
+
+        .cs_map_image {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          border: 4px solid #23343B;
+        }
+
+        /* Mobile Responsive Centering */
+        @media (max-width: 991.98px) {
+          .cs_map_content {
+            text-align: center;
+            margin-bottom: 30px;
+          }
+          
+          .cs_map_text {
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          .cs_map_content {
+            text-align: center;
+            margin-bottom: 25px;
+          }
+          
+          .cs_map_text {
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 25px;
+          }
+          
+          .cs_location_item {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            align-items: center;
+          }
+          
+          .cs_location_icon {
+            align-self: center;
+          }
+          
+          .cs_location_title {
+            font-size: 16px;
+          }
+          
+          .cs_location_address,
+          .cs_location_phone {
+            font-size: 13px;
+          }
+        }
+
+        @media (max-width: 575.98px) {
+          .cs_map_content {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+          
+          .cs_map_text {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+          
+          .cs_location_item {
+            margin-bottom: 15px;
+          }
+          
+          .cs_location_title {
+            font-size: 15px;
+          }
+          
+          .cs_location_address,
+          .cs_location_phone {
+            font-size: 12px;
+          }
+        }
+      `}</style>
     </>
   );
 };

@@ -15,12 +15,12 @@ const ThreeIcon = ({ data = {} }) => {
         description: "Professional medical care from experienced healthcare providers.",
       },
       {
-        icon: "/assets/img/icons/service_icon_2.png",
+        icon: "/assets/img/icons/service_icon_10.png",
         title: "24/7 Support",
         description: "Round-the-clock medical assistance when you need it most.",
       },
       {
-        icon: "/assets/img/icons/service_icon_3.png",
+        icon: "/assets/img/icons/service_icon_11.png",
         title: "Advanced Technology",
         description: "Cutting-edge medical equipment and innovative treatment methods.",
       },
@@ -79,6 +79,25 @@ const ThreeIcon = ({ data = {} }) => {
           background-color: #23343b; /* blue/grey */
           padding: 40px 0; /* reduced vertical spacing */
           color: #ffffff;
+        }
+
+        /* Mobile Responsive Padding */
+        @media (max-width: 991.98px) {
+          .three-icon-section {
+            padding: 30px 0;
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          .three-icon-section {
+            padding: 25px 0;
+          }
+        }
+
+        @media (max-width: 575.98px) {
+          .three-icon-section {
+            padding: 20px 0;
+          }
         }
 
         /* Tighter gap below the heading block */
@@ -195,6 +214,14 @@ const ThreeIcon = ({ data = {} }) => {
         }
 
         @media (max-width: 991.98px) {
+          .custom-title {
+            font-size: 32px;
+          }
+          
+          .custom-description {
+            font-size: 15px;
+          }
+          
           .cs_three_icon_item {
             padding: 30px 15px;
             margin-bottom: 30px;
@@ -214,6 +241,14 @@ const ThreeIcon = ({ data = {} }) => {
         }
 
         @media (max-width: 767.98px) {
+          .custom-title {
+            font-size: 28px;
+          }
+          
+          .custom-description {
+            font-size: 14px;
+          }
+          
           .cs_three_icon_item {
             padding: 25px 10px;
           }
@@ -228,6 +263,34 @@ const ThreeIcon = ({ data = {} }) => {
           }
           .cs_three_icon_description {
             font-size: 14px;
+          }
+        }
+
+        @media (max-width: 575.98px) {
+          .custom-title {
+            font-size: 24px;
+          }
+          
+          .custom-description {
+            font-size: 13px;
+            padding: 0 10px;
+          }
+          
+          .cs_three_icon_item {
+            padding: 20px 15px;
+          }
+          .cs_three_icon_icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 14px;
+          }
+          .cs_three_icon_title {
+            font-size: 16px;
+            margin-bottom: 6px;
+          }
+          .cs_three_icon_description {
+            font-size: 13px;
+            max-width: 100%;
           }
         }
       `}</style>

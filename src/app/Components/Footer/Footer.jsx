@@ -94,12 +94,10 @@ const Footer = () => {
       style={{
         backgroundColor: bg,
         color: fg,
-        // kill any ghost gaps from parent styles
         margin: 0,
         borderTop: '0 none',
       }}
     >
-      {/* force full-bleed background to the very top of the footer */}
       <div
         style={{
           backgroundColor: bg,
@@ -109,22 +107,17 @@ const Footer = () => {
         <div className="container" style={{ paddingTop: 40 }} ref={sectionRef}>
           <div
             className={`cs_footer_row footer-content ${isInView ? 'animate-in' : ''}`}
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, minmax(0,1fr))',
-              gap: 24,
-            }}
           >
             {/* Brand + Contact */}
             <div className="cs_footer_col">
               <div className="cs_footer_highlight_col" style={{ backgroundColor: bg }}>
-                <div className="cs_footer_logo" style={{ marginBottom: 20 }}>
+                <div className="cs_footer_logo">
                   <Image src={data.logo} alt="Healnexxt" width={205} height={53} />
                 </div>
 
-                <ul className="cs_footer_contact cs_mp_0" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                  <li style={{ display: 'flex', gap: 12, marginBottom: 14 }}>
-                    <i style={{ color: fg, lineHeight: 1 }}>
+                <ul className="cs_footer_contact">
+                  <li>
+                    <i style={{ color: fg }}>
                       <FaRegClock />
                     </i>
                     <span
@@ -132,8 +125,8 @@ const Footer = () => {
                       dangerouslySetInnerHTML={{ __html: data.contactText }}
                     />
                   </li>
-                  <li style={{ display: 'flex', gap: 12, marginBottom: 14 }}>
-                    <i style={{ color: fg, lineHeight: 1 }}>
+                  <li>
+                    <i style={{ color: fg }}>
                       <FaLocationDot />
                     </i>
                     <span
@@ -141,8 +134,8 @@ const Footer = () => {
                       dangerouslySetInnerHTML={{ __html: data.contactText2 }}
                     />
                   </li>
-                  <li style={{ display: 'flex', gap: 12 }}>
-                    <i style={{ color: fg, lineHeight: 1 }}>
+                  <li>
+                    <i style={{ color: fg }}>
                       <FaPhoneAlt />
                     </i>
                     <span
@@ -152,23 +145,23 @@ const Footer = () => {
                   </li>
                 </ul>
 
-                <div className="cs_social_btns cs_style_1" style={{ display: 'flex', gap: 10, marginTop: 20 }}>
-                  <Link href={data.facebookHref} className="cs_center" style={{ backgroundColor: accent, color: fg, width: 40, height: 40, display: 'grid', placeItems: 'center', borderRadius: 6 }}>
+                <div className="cs_social_btns">
+                  <Link href={data.facebookHref} className="cs_center social-btn">
                     <i>
                       <FaFacebookF />
                     </i>
                   </Link>
-                  <Link href={data.linkedinHref} className="cs_center" style={{ backgroundColor: accent, color: fg, width: 40, height: 40, display: 'grid', placeItems: 'center', borderRadius: 6 }}>
+                  <Link href={data.linkedinHref} className="cs_center social-btn">
                     <i>
                       <FaLinkedinIn />
                     </i>
                   </Link>
-                  <Link href={data.twitterHref} className="cs_center" style={{ backgroundColor: accent, color: fg, width: 40, height: 40, display: 'grid', placeItems: 'center', borderRadius: 6 }}>
+                  <Link href={data.twitterHref} className="cs_center social-btn">
                     <i>
                       <FaXTwitter />
                     </i>
                   </Link>
-                  <Link href={data.instagramHref} className="cs_center" style={{ backgroundColor: accent, color: fg, width: 40, height: 40, display: 'grid', placeItems: 'center', borderRadius: 6 }}>
+                  <Link href={data.instagramHref} className="cs_center social-btn">
                     <i>
                       <FaInstagram />
                     </i>
@@ -181,13 +174,13 @@ const Footer = () => {
             {data.widgets.map((widget, index) => (
               <div className="cs_footer_col" key={index}>
                 <div className="cs_footer_widget">
-                  <h2 className="cs_footer_widget_title" style={{ color: fg, marginBottom: 16 }}>
+                  <h2 className="cs_footer_widget_title">
                     {widget.title}
                   </h2>
-                  <ul className="cs_footer_widget_nav_list cs_mp_0" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                  <ul className="cs_footer_widget_nav_list">
                     {widget.links.map((link, idx) => (
-                      <li key={idx} style={{ marginBottom: 10 }}>
-                        <Link href={link.href} style={{ color: fg, textDecoration: 'none' }}>
+                      <li key={idx}>
+                        <Link href={link.href}>
                           {link.text}
                         </Link>
                       </li>
@@ -200,16 +193,16 @@ const Footer = () => {
           </div>
 
           {/* bottom */}
-          <div className={`cs_footer_bottom footer-bottom ${isInView ? 'animate-in' : ''}`} style={{ backgroundColor: bg, marginTop: 32, borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-            <div className="container" style={{ paddingTop: 18, paddingBottom: 18 }}>
-              <div className="cs_footer_bottom_in" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
-                <p className="cs_footer_copyright mb-0" style={{ color: fg, margin: 0 }}>
+          <div className={`cs_footer_bottom footer-bottom ${isInView ? 'animate-in' : ''}`}>
+            <div className="container">
+              <div className="cs_footer_bottom_in">
+                <p className="cs_footer_copyright">
                   {data.copyrightText}
                 </p>
-                <ul className="cs_footer_menu cs_mp_0" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', gap: 16 }}>
+                <ul className="cs_footer_menu">
                   {data.footerMenu.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.href} style={{ color: fg, textDecoration: 'none' }}>{item.text}</Link>
+                      <Link href={item.href}>{item.text}</Link>
                     </li>
                   ))}
                 </ul>
@@ -221,6 +214,101 @@ const Footer = () => {
       </div>
 
       <style jsx>{`
+        .cs_footer_row {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+
+        .cs_footer_logo {
+          margin-bottom: 20px;
+        }
+
+        .cs_footer_contact {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .cs_footer_contact li {
+          display: flex;
+          gap: 12px;
+          margin-bottom: 14px;
+          align-items: flex-start;
+        }
+
+        .cs_social_btns {
+          display: flex;
+          gap: 10px;
+          margin-top: 20px;
+        }
+
+        .social-btn {
+          background-color: ${accent};
+          color: ${fg};
+          width: 40px;
+          height: 40px;
+          display: grid;
+          place-items: center;
+          border-radius: 6px;
+        }
+
+        .cs_footer_widget_title {
+          color: ${fg};
+          margin-bottom: 16px;
+          font-size: 1.2rem;
+        }
+
+        .cs_footer_widget_nav_list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .cs_footer_widget_nav_list li {
+          margin-bottom: 10px;
+        }
+
+        .cs_footer_widget_nav_list a {
+          color: ${fg};
+          text-decoration: none;
+        }
+
+        .cs_footer_bottom {
+          margin-top: 32px;
+          border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cs_footer_bottom .container {
+          padding: 18px 0;
+        }
+
+        .cs_footer_bottom_in {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+
+        .cs_footer_copyright {
+          margin: 0;
+          color: ${fg};
+        }
+
+        .cs_footer_menu {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          gap: 16px;
+        }
+
+        .cs_footer_menu a {
+          color: ${fg};
+          text-decoration: none;
+        }
+
         /* Footer Scroll Animations */
         .footer-content {
           opacity: 0;
@@ -248,82 +336,89 @@ const Footer = () => {
           transition-delay: 0.4s;
         }
 
-        /* Mobile Responsiveness */
+        /* Tablet Styles */
         @media (max-width: 991.98px) {
-          .footer-content {
-            grid-template-columns: repeat(2, minmax(0,1fr));
-            gap: 20px;
+          .cs_footer_row {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
           }
-          
-          .cs_footer_col {
-            margin-bottom: 2rem;
-          }
-          
-          .cs_social_btns {
-            justify-content: center;
-            margin-top: 1.5rem;
-          }
-        }
 
-        @media (max-width: 767.98px) {
-          .footer-content {
-            grid-template-columns: 1fr;
-            gap: 16px;
-          }
-          
           .cs_footer_col {
-            margin-bottom: 1.5rem;
-            text-align: center;
+            margin-bottom: 0;
           }
-          
+
+          .cs_footer_col:first-child {
+            grid-column: 1 / -1;
+          }
+
           .cs_footer_logo {
             text-align: center;
           }
-          
-          .cs_footer_contact {
-            text-align: center;
-          }
-          
+
           .cs_footer_contact li {
             justify-content: center;
           }
-          
+
           .cs_social_btns {
             justify-content: center;
-            margin-top: 1rem;
-          }
-          
-          .cs_footer_bottom_in {
-            flex-direction: column;
-            text-align: center;
-            gap: 12px;
-          }
-          
-          .cs_footer_menu {
-            justify-content: center;
-            flex-wrap: wrap;
           }
         }
 
-        @media (max-width: 575.98px) {
+        /* Mobile Styles */
+        @media (max-width: 767.98px) {
+          .cs_footer_row {
+            grid-template-columns: 1fr;
+            gap: 24px;
+          }
+
+          .cs_footer_col {
+            text-align: center;
+          }
+
           .cs_footer_widget_title {
             font-size: 1.1rem;
           }
-          
-          .cs_footer_widget_nav_list li {
-            margin-bottom: 8px;
+
+          .cs_footer_bottom_in {
+            flex-direction: column;
+            text-align: center;
           }
-          
+
+          .cs_footer_menu {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+          }
+
           .cs_footer_copyright {
             font-size: 0.9rem;
           }
-          
-          .cs_footer_menu {
-            gap: 12px;
+        }
+
+        /* Small Mobile Styles */
+        @media (max-width: 575.98px) {
+          .cs_footer_contact li {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 8px;
           }
-          
+
+          .cs_footer_widget_nav_list li {
+            margin-bottom: 8px;
+          }
+
+          .cs_footer_menu {
+            gap: 8px;
+          }
+
           .cs_footer_menu li {
             font-size: 0.9rem;
+          }
+
+          .social-btn {
+            width: 36px;
+            height: 36px;
           }
         }
       `}</style>

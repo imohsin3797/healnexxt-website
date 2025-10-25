@@ -172,13 +172,13 @@ const heroData = {
       },
       {
         href: '/service/service-details',
-        iconSrc: '/assets/img/icons/service_icon_4.png',
+        iconSrc: '/assets/img/icons/service_icon_10.png',
         iconAlt: 'Infection Prevention Medical Dental',
         text: 'Infection Prevention Medical Dental',
       },
       {
         href: '/service/service-details',
-        iconSrc: '/assets/img/icons/service_icon_6.png',
+        iconSrc: '/assets/img/icons/service_icon_11.png',
         iconAlt: 'Preventive Care Medical Dental',
         text: 'Preventive Care Medical Dental',
       },

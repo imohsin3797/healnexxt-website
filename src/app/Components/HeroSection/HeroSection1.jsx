@@ -401,6 +401,14 @@ const HeroSection1 = ({ data }) => {
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
           }
+
+          .cs_hero_text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+          }
         }
 
         @media (max-width: 767.98px) {
@@ -421,6 +429,7 @@ const HeroSection1 = ({ data }) => {
           .cs_hero.cs_style_2 .cs_hero_features {
             flex-direction: column;
             gap: 0.75rem;
+            align-items: center;
           }
           
           .cs_hero.cs_style_2 .cs_hero_feature_item {
@@ -448,6 +457,7 @@ const HeroSection1 = ({ data }) => {
           .cs_hero.cs_style_2 .cs_hero_btns {
             flex-direction: column;
             gap: 0.75rem;
+            align-items: center;
           }
           
           .cs_hero.cs_style_2 .cs_btn {

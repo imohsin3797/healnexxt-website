@@ -59,26 +59,7 @@ const DoctorDetailsSection = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className="cs_height_47 cs_height_lg_40" />
-        <div className="cs_progress_bar_wrapper">
-          {data.progressBars.map((progress, index) => (
-            <div className="cs_progress_item" key={index}>
-              <div className="cs_progress_head">
-                <span>{progress.label}</span>
-                <span>{progress.percentage}%</span>
-              </div>
-              <div className="cs_progress">
-                <div
-                  className="cs_progress_in"
-                  style={{ width: `${progress.percentage}%` }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
-      <div className="cs_height_100 cs_height_lg_60" />
-      <hr />
     </div>
   );
 };

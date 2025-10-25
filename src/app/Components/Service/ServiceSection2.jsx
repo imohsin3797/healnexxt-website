@@ -162,8 +162,9 @@ const ServiceSection2 = ({ data }) => {
           }
           .service-card .cs_iconbox_thumbnail {
             position: static;      /* fall back to inline flow */
-            display: block;
-            margin: 12px 0 0 auto; /* push to the right inside the card */
+            display: flex;         /* enable centering */
+            justify-content: center; /* center horizontally */
+            margin: 12px 0 0;      /* reset margin */
             transform: none;
             opacity: 1;            /* always visible on tiny screens */
           }

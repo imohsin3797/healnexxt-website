@@ -38,21 +38,10 @@ const headingData = {
         icon: <FaCertificate />,
         title: 'Qualification',
         subtitle: 'M.S.S',
-        secIcon: <FaGlobe />,
-        secTitle: 'Website',
-        secSubtitle: 'demo.com',
+        secIcon: <FaSuitcase />,
+        secTitle: 'Experience',
+        secSubtitle: '2 - 4 Years',
       },
-      {
-        icon: <FaSuitcase />,
-        title: 'Experience',
-        subtitle: '2 - 4 Years',
-      },
-    ],
-    progressBars: [
-      { label: 'Medical', percentage: 44 },
-      { label: 'Solution', percentage: 78 },
-      { label: 'Dental', percentage: 65 },
-      { label: 'Medical Lab', percentage: 85 },
     ],
   };
   
@@ -124,12 +113,12 @@ const page = () => {
             <PageHeading data={headingData} />
         </Section> 
 
-        <Section topSpaceLg="80" topSpaceMd="120">
+        <Section topSpaceLg="80" topSpaceMd="120" className="cs_tan_background">
             <DoctorDetailsSection data={doctorDetails} />
         </Section>
 
         {/* Start Team Section */}
-        <Section topSpaceLg="80" topSpaceMd="110">
+        <Section topSpaceLg="100" topSpaceMd="100" className="cs_tan_background">
             <TeamSection variant={'cs_pagination cs_style_2'} data={teamData} />
         </Section>
         {/* End Team Section */}

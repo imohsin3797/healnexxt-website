@@ -102,6 +102,20 @@ const Header = ({ variant }) => {
                       )}
                     </li>
                   ))}
+                  
+                  {/* Mobile Referrals Button */}
+                  <li className="cs_mobile_button_item">
+                    <Link
+                      href={menu.btnUrl}
+                      className="cs_btn cs_style_1 cs_color_1 cs_mobile_button"
+                      onClick={() => setIsShowMobileMenu(!isShowMobileMenu)}
+                    >
+                      <span>{menu.btnText}</span>
+                      <i>
+                        <FaAnglesRight />
+                      </i>
+                    </Link>
+                  </li>
                 </ul>
                 <span
                   className={`cs_menu_toggle ${
@@ -112,7 +126,7 @@ const Header = ({ variant }) => {
                   <span></span>
                 </span>
               </div>
-              <Link href={menu.btnUrl} className="cs_btn cs_style_1 cs_color_1">
+              <Link href={menu.btnUrl} className="cs_btn cs_style_1 cs_color_1 cs_desktop_button">
                 <span>{menu.btnText}</span>
                 <i>
                   <FaAnglesRight />

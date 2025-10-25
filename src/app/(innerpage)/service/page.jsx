@@ -5,7 +5,7 @@ import OverlapGuard from '@/app/Components/OverlapGuard'; // client-only style i
 import ThreeIcon from '@/app/Components/ThreeIcon/ThreeIcon';
 import React from 'react';
 
-const headingData = { title: 'Service' };
+const headingData = { title: 'Services' };
 
 const threeIconData = {
   sectionSubtitle: "OUR SERVICES",
@@ -13,17 +13,17 @@ const threeIconData = {
   sectionDescription: "Healnexxt provides comprehensive wound assessment and advanced procedures, including compression therapy, debridement, wound cultures, imaging, and innovative modalities designed to accelerate healing and minimize pain.",
   icons: [
     {
-      icon: "/assets/img/icons/service_icon_1.png",
+      icon: "/assets/img/icons/service_icon_12.png",
       title: "Wound Care Specialties",
       description: "Surgical wounds, traumatic injuries, burns, diabetic wounds, pressure injuries, and venous & arterial wounds."
     },
     {
-      icon: "/assets/img/icons/service_icon_2.png",
+      icon: "/assets/img/icons/service_icon_10.png",
       title: "Connected Care Network", 
       description: "Strategic partnerships that bridge healthcare gaps, reduce readmissions, and prevent unnecessary amputations."
     },
     {
-      icon: "/assets/img/icons/service_icon_3.png",
+      icon: "/assets/img/icons/service_icon_11.png",
       title: "Continued Support",
       description: "Compassionate guidance through every step of healing with dedicated advocates who ensure you never feel alone."
     }
@@ -71,9 +71,9 @@ const page = () => {
       {/* Three Icon Section */}
       <Section
         topSpaceLg="80"
-        topSpaceMd="0"
+        topSpaceMd="60"
         bottomSpaceLg="80"
-        bottomSpaceMd="40"
+        bottomSpaceMd="60"
         style={{
           backgroundColor: '#23343B',
           color: '#ffffff'
@@ -86,9 +86,9 @@ const page = () => {
       <Section
         className="services-solution"
         topSpaceLg="80"
-        topSpaceMd="120"
+        topSpaceMd="60"
         bottomSpaceLg="80"
-        bottomSpaceMd="80"
+        bottomSpaceMd="60"
         style={{
           backgroundColor: '#23343B',
           paddingTop: '80px',

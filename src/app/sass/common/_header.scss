@@ -105,6 +105,29 @@
       gap: 5px 0px;
     }
   }
+  
+  /* Desktop Button Styling */
+  .cs_desktop_button {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border-radius: 20px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    transition: all 0.3s ease !important;
+    
+    i {
+      font-size: 12px !important;
+    }
+  }
+  
+  /* Hide mobile button on desktop */
+  @media (min-width: 768px) {
+    .cs_mobile_button_item {
+      display: none !important;
+    }
+  }
   .cs_search_toggle {
     height: 35px;
     width: 35px;
@@ -671,6 +694,40 @@
           line-height: 22px;
         }
       }
+      
+      /* Mobile Button Styling */
+      .cs_mobile_button_item {
+        margin: 20px 15px 0;
+        padding: 0;
+        
+        .cs_mobile_button {
+          display: inline-flex !important;
+          width: auto;
+          justify-content: center;
+          align-items: center;
+          padding: 8px 16px;
+          font-size: 14px;
+          font-weight: 500;
+          border-radius: 20px;
+          background-color: var(--accent-color);
+          color: #EADFD4;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          border: none;
+          gap: 6px;
+          margin: 0 auto;
+          
+          &:hover {
+            background-color: var(--blue-color);
+            color: #EADFD4;
+            text-decoration: none;
+          }
+          
+          i {
+            font-size: 12px;
+          }
+        }
+      }
     }
 
     .menu-item-has-children {
@@ -826,8 +883,9 @@
 }
 @media screen and (max-width: 767px) {
   .cs_site_header {
-    .cs_btn.cs_style_1 {
-      display: none;
+    .cs_btn.cs_style_1,
+    .cs_desktop_button {
+      display: none !important;
     }
   }
 }
