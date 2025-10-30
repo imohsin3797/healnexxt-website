@@ -220,6 +220,12 @@ const HeroSection1 = ({ data }) => {
         }
 
         .cs_hero_text, .container { position: relative; z-index: 1; }
+        .cs_hero_text {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          min-height: inherit;
+        }
 
         /* Overlay gradient to match hero look */
         .cs_hero::after {
@@ -442,6 +448,10 @@ const HeroSection1 = ({ data }) => {
             min-height: 450px;
           }
           
+          .cs_hero_text {
+            padding-top: 32px;
+          }
+
           .cs_hero.cs_style_2 .cs_hero_title {
             font-size: 1.75rem;
           }

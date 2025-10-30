@@ -108,9 +108,14 @@ const GoogleMap = ({ data = {} }) => {
           margin-top: 30px;
         }
 
+        .cs_map_content {
+          text-align: center;
+        }
+
         .cs_location_item {
           display: flex;
-          align-items: flex-start;
+          align-items: center;
+          justify-content: center;
           gap: 15px;
         }
 
