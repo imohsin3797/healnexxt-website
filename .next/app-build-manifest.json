@@ -17,20 +17,20 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/(innerpage)/contact/page": [
+    "/(innerpage)/service/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(innerpage)/contact/page.js"
+      "static/chunks/app/(innerpage)/service/page.js"
     ],
     "/(innerpage)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(innerpage)/layout.js"
     ],
-    "/_not-found/page": [
+    "/(innerpage)/about/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/(innerpage)/about/page.js"
     ]
   }
 }

@@ -49,7 +49,7 @@ const ThreeIcon = ({ data = {} }) => {
             </div>
           </div>
 
-          {/* Three Icons */}
+          {/* Service Icons */}
           <div className="row cs_gap_y_40" style={{ marginTop: '16px' }}>
             {componentData.icons.map((item, index) => (
               <div key={index} className="col-lg-4 col-md-6">

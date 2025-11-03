@@ -121,39 +121,39 @@ const HeroData = {
   
   const serviceData = {
     subtitle: 'OUR SERVICES',
-    title: 'Comprehensive Wound & Dermatology Care',
+    title: 'Comprehensive Healthcare Services',
     description:
-      'Healnexxt provides comprehensive wound assessment and advanced procedures, including compression therapy, debridement, wound cultures, imaging, and innovative modalities designed to accelerate healing and minimize pain.',
+      'Healnexxt provides expert care across four key service areas—Dermatology Care, Wound Care, Psych and Behavior Care, and Urgent Care—delivering specialized medical attention right to your doorstep with advanced technology and compassionate support.',
     services: [
       {
-        iconSrc: '/assets/img/icons/service_icon_15.png',
-        title: 'Wound Care Specialties',
-        subtitle:
-          'Surgical wounds, traumatic injuries, burns, diabetic wounds,<br> pressure injuries, and venous & arterial wounds',
-        link: '/service/service-details',
-        imageSrc: '/assets/img/service_1.png',
-      },
-      {
         iconSrc: '/assets/img/icons/service_icon_16.png',
-        title: 'Dermatology Services',
+        title: 'Dermatology Care',
         subtitle:
           'Expert dermatological care for skin conditions,<br> mole evaluations, and comprehensive skin health assessments',
         link: '/service/service-details',
         imageSrc: '/assets/img/service_1.png',
       },
       {
-        iconSrc: '/assets/img/icons/service_icon_17.png',
-        title: 'Connected Care Network',
+        iconSrc: '/assets/img/icons/service_icon_15.png',
+        title: 'Wound Care',
         subtitle:
-          'Strategic partnerships that bridge healthcare gaps,<br> reduce readmissions, and prevent unnecessary amputations',
+          'Surgical wounds, traumatic injuries, burns, diabetic wounds,<br> pressure injuries, and venous & arterial wounds',
+        link: '/service/service-details',
+        imageSrc: '/assets/img/service_1.png',
+      },
+      {
+        iconSrc: '/assets/img/icons/service_icon_17.png',
+        title: 'Psych and Behavior Care',
+        subtitle:
+          'Comprehensive mental health and behavioral health services<br> with compassionate, personalized treatment approaches',
         link: '/service/service-details',
         imageSrc: '/assets/img/service_1.png',
       },
       {
         iconSrc: '/assets/img/icons/service_icon_18.png',
-        title: 'Continued Support',
+        title: 'Urgent Care',
         subtitle:
-          'Compassionate guidance through every step of healing<br> with dedicated advocates who ensure you never feel alone',
+          'Immediate medical attention for acute conditions<br> delivered promptly to your location when you need it most',
         link: '/service/service-details',
         imageSrc: '/assets/img/service_1.png',
       },

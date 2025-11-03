@@ -13,31 +13,24 @@ const MedicalSolution2 = ({ data }) => {
     setExpandedId((currentId) => (currentId === id ? null : id));
   };
 
-  const allServices = [
-    ...data.links.map((link, index) => ({
-      id: `link-${index}`,
-      key: (link.href ? `${link.href}-` : "service-") + index,
-      icon: link.iconSrc,
-      title: link.text,
-      description: getServiceDescription(link.text),
-    })),
-    {
-      id: "continued-care",
-      key: "continued-care", 
-      icon: "/assets/img/icons/service_icon_12.png",
-      title: "Continued Care",
-      description: "We will be there with you every step of the way. Our compassionate and knowledgeable staff guides you through every step of the healing process. You will never feel alone and will always have an advocate with us.",
-    }
-  ];
+  const allServices = data.links.map((link, index) => ({
+    id: `link-${index}`,
+    key: (link.href ? `${link.href}-` : "service-") + index,
+    icon: link.iconSrc,
+    title: link.text,
+    description: getServiceDescription(link.text),
+  }));
 
   function getServiceDescription(serviceTitle) {
     switch(serviceTitle) {
-      case 'Comprehensive Wound Assessment':
+      case 'Dermatology Care':
+        return "Expert dermatological care for skin conditions, mole evaluations, and comprehensive skin health assessments. Our experienced physicians provide personalized treatment for all your dermatological needs, delivered right to your location.";
+      case 'Wound Care':
         return "Healnexxt provides comprehensive wound assessment and advanced procedures, including compression therapy, debridement, wound cultures, imaging, and innovative modalities designed to accelerate healing and minimize pain. Our evidence-based approach ensures patients receive the highest level of care for optimal recovery.";
-      case 'Dermatology Services':
-        return "Expert dermatological care for skin conditions, mole evaluations, and comprehensive skin health assessments. Our experienced physicians do everything possible to relieve your pain and reduce healing time.";
-      case 'Connected Care Network':
-        return "Connected care that puts your unique needs first. When necessary we utilize our comprehensive network and refer you to expert doctors and surgeons who are ready to serve needs that require additional tests and procedures in a hospital or clinical setting.";
+      case 'Psych and Behavior Care':
+        return "Comprehensive mental health and behavioral health services with compassionate, personalized treatment approaches. Our experienced clinicians provide support for a wide range of psychological and behavioral conditions, delivered with care and understanding.";
+      case 'Urgent Care':
+        return "Immediate medical attention for acute conditions delivered promptly to your location when you need it most. Our urgent care services provide timely evaluation and treatment for non-life-threatening medical emergencies, ensuring you get the care you need without delay.";
       default:
         return "Detailed information about our comprehensive medical services and specialized care options.";
     }

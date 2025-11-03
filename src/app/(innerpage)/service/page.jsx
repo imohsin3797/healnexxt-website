@@ -8,49 +8,54 @@ import React from 'react';
 const headingData = { title: 'Services' };
 
 const threeIconData = {
-  sectionSubtitle: "OUR SERVICES",
-  sectionTitle: "Comprehensive Wound & Dermatology Care",
-  sectionDescription: "Healnexxt provides comprehensive wound assessment and advanced procedures, including compression therapy, debridement, wound cultures, imaging, and innovative modalities designed to accelerate healing and minimize pain.",
+  sectionSubtitle: "WHY CHOOSE US",
+  sectionTitle: "The Healnexxt Advantage",
+  sectionDescription: "Healnexxt redefines healthcare accessibility by bringing expert care directly to you. Our innovative approach ensures comprehensive, patient-centered treatment with seamless coordination and advanced technology.",
   icons: [
     {
-      icon: "/assets/img/icons/service_icon_12.png",
-      title: "Wound Care Specialties",
-      description: "Surgical wounds, traumatic injuries, burns, diabetic wounds, pressure injuries, and venous & arterial wounds."
+      icon: "/assets/img/icons/about_icon_1.png",
+      title: "Patient-Centered Care",
+      description: "Every aspect of our service is designed around your unique needs, ensuring personalized treatment and compassionate support throughout your healing journey."
     },
     {
-      icon: "/assets/img/icons/service_icon_10.png",
+      icon: "/assets/img/icons/about_icon_2.png",
       title: "Connected Care Network", 
-      description: "Strategic partnerships that bridge healthcare gaps, reduce readmissions, and prevent unnecessary amputations."
+      description: "Seamlessly connecting patients with specialized services through strategic partnerships that bridge healthcare gaps and reduce readmissions."
     },
     {
       icon: "/assets/img/icons/service_icon_11.png",
-      title: "Continued Support",
-      description: "Compassionate guidance through every step of healing with dedicated advocates who ensure you never feel alone."
+      title: "Advanced Technology",
+      description: "Cutting-edge medical equipment and innovative treatment modalities delivered right to your location, ensuring you receive the highest quality care."
     }
   ]
 };
 
 const medicalSolutionData = {
   subtitle: 'OUR SERVICES',
-  title: 'Connected Care Through Strategic Partnerships',
+  title: 'Comprehensive Healthcare Services',
   description:
-    'Healnexxt leverages years of expertise in post-acute care to bridge gaps in fragmented healthcare, reducing hospital readmissions, improving wound healing, and preventing unnecessary amputations. Through a proactive, connected approach, we ensure patients receive seamless, high-quality care that drives better outcomes.',
+    'Healnexxt provides expert care across four key service areas, delivering specialized medical attention right to your doorstep with advanced technology and compassionate support. Our comprehensive approach ensures patients receive seamless, high-quality care that drives better outcomes.',
   thumbnailSrc: '/assets/img/medical_solution_3.png',
   links: [
     {
       href: '/service/service-details',
-      iconSrc: '/assets/img/icons/service_icon_19.png',
-      text: 'Comprehensive Wound Assessment',
+      iconSrc: '/assets/img/icons/service_icon_16.png',
+      text: 'Dermatology Care',
     },
     {
       href: '/service/service-details',
-      iconSrc: '/assets/img/icons/service_icon_10.png',
-      text: 'Dermatology Services',
+      iconSrc: '/assets/img/icons/service_icon_12.png',
+      text: 'Wound Care',
     },
     {
       href: '/service/service-details',
-      iconSrc: '/assets/img/icons/service_icon_11.png',
-      text: 'Connected Care Network',
+      iconSrc: '/assets/img/icons/service_icon_17.png',
+      text: 'Psych and Behavior Care',
+    },
+    {
+      href: '/service/service-details',
+      iconSrc: '/assets/img/icons/service_icon_18.png',
+      text: 'Urgent Care',
     },
   ],
 };
