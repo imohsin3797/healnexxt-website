@@ -1,3 +1,4 @@
+"use client";
 import About from '@/app/Components/About';
 import CtaSection1 from '@/app/Components/CtaSection/CtaSection1';
 import CounterSection2 from '@/app/Components/FunSection/CounterSection2';
@@ -9,7 +10,7 @@ import React from 'react';
 
 const headingData = {
     title: 'About Page',
-    color: '#23343B'
+    color: '#ffffff'
   };
   
   const aboutData = {
@@ -20,7 +21,7 @@ const headingData = {
     service:
       "Healnexxt is transforming healthcare culture by prioritizing proactive, patient-centered care over reactive treatment. We invest in our team members, fostering a supportive environment that reduces burnout and empowers providers to deliver exceptional care. Through transformational leadership, we cultivate innovation and collaboration—ensuring both patients and healthcare professionals thrive.",
     experienceYears: '26+',
-    experienceTitle: 'Experience',
+    experienceTitle: 'Years of Experience',
     videoUrl: 'https://www.youtube.com/embed/rRid6GCJtgc',
     videoText: 'How We Work',
     iconboxes: [
@@ -39,7 +40,7 @@ const headingData = {
     btnUrl: '/about',
     btnText: 'About More',
     sectionImgUrl: '/assets/img/about_section_img_1.png',
-    headImgUrl: '/assets/img/about_img_7.jpeg',
+    headImgUrl: '/assets/img/about-3.webp',
   };
   
   const counterData = [
@@ -70,13 +71,13 @@ const headingData = {
   ];
   
   const teamData = {
-    subtitle: 'OUR TEAM MEMBER',
-    title: ' Meet Our Specialist This <br />Doctor Meeting',
+    subtitle: 'OUR TEAM',
+    title: ' Meet Our Expert Team of <br />Physicians and Specialists',
     sliderData: [
       {
         name: 'Dr. Norma Pedric',
         profession: 'Neurologist',
-        imageUrl: '/assets/img/team_1.jpg',
+        imageUrl: '/assets/img/specialist-1.png',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',
@@ -86,7 +87,7 @@ const headingData = {
       {
         name: 'Dr. James Lewis',
         profession: 'Neurologist',
-        imageUrl: '/assets/img/team_3.jpg',
+        imageUrl: '/assets/img/specialist-2.png',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',
@@ -96,7 +97,7 @@ const headingData = {
       {
         name: 'Dr. Sophia Anderson',
         profession: 'Neurologist',
-        imageUrl: '/assets/img/team_4.jpg',
+        imageUrl: '/assets/img/specialist-4.png',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',
@@ -106,7 +107,7 @@ const headingData = {
       {
         name: 'Dr. Michael Thompson',
         profession: 'Neurologist',
-        imageUrl: '/assets/img/team_5.jpg',
+        imageUrl: '/assets/img/specialist-5.png',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',
@@ -116,7 +117,27 @@ const headingData = {
       {
         name: 'Dr. David Wilson',
         profession: 'Neurologist',
-        imageUrl: '/assets/img/team_6.jpg',
+        imageUrl: '/assets/img/specialist-6.png',
+        link: '/doctors/doctor-details',
+        facebook: '/',
+        pinterest: '/',
+        twitter: '/',
+        instagram: '/',
+      },
+      {
+        name: 'Dr. David Wilson',
+        profession: 'Neurologist',
+        imageUrl: '/assets/img/specialist-7.png',
+        link: '/doctors/doctor-details',
+        facebook: '/',
+        pinterest: '/',
+        twitter: '/',
+        instagram: '/',
+      },
+      {
+        name: 'Dr. David Wilson',
+        profession: 'Neurologist',
+        imageUrl: '/assets/img/specialist-8.png',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',
@@ -156,11 +177,59 @@ const page = () => {
     return (
         <div className='about-page-area' style={{backgroundColor: '#EADFD4'}}>
         <Section
-        className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/page_heading_bg.jpg"
+        className={'cs_page_heading cs_bg_filed cs_center about-page-banner'}
+        backgroundImage="/assets/img/about-page.png"
+        style={{
+          backgroundSize: '110% auto',
+          backgroundPosition: 'center 80%',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
         <PageHeading data={headingData} />
       </Section>
+      
+      <style jsx>{`
+        .about-page-banner {
+          position: relative;
+          height: 750px !important;
+          min-height: 750px !important;
+        }
+        
+        .about-page-banner::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background-color: rgba(255, 255, 255, 0.4);
+          z-index: 0;
+          pointer-events: none;
+        }
+        
+        @media (max-width: 991px) {
+          .about-page-banner {
+            height: 550px !important;
+            min-height: 550px !important;
+          }
+        }
+        
+        .about-page-banner::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.25) 0%,
+            rgba(255, 255, 255, 0.25) 40%,
+            rgba(255, 255, 255, 0.2) 100%
+          );
+          z-index: 1;
+          pointer-events: none;
+        }
+        
+        .about-page-banner .container {
+          position: relative;
+          z-index: 2;
+        }
+      `}</style>
       {/* Start About Section */}
 
       {/* Start About Section */}

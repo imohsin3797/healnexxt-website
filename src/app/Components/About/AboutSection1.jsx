@@ -32,19 +32,22 @@ const AboutSection1 = ({ data }) => {
   return (
     <>
       <div className="container" ref={sectionRef}>
-        <div className="row cs_gap_y_40">
-          <div className="col-lg-6">
+        <div className="row cs_gap_y_40 about-section-row">
+          <div className="col-lg-6 about-image-col">
             <div
               className={`cs_about_thumb about-left-card ${
                 isInView ? "animate-in" : ""
               }`}
             >
-              <Image
-                src="/assets/img/about_img_3.png"
-                alt="img"
-                width={680}
-                height={751}
-              />
+              <div className="about-image-wrapper">
+                <Image
+                  src="/assets/img/experience-1.png"
+                  alt="img"
+                  width={900}
+                  height={1200}
+                  className="about-main-image"
+                />
+              </div>
               <div
                 className="cs_experience_box cs_center"
                 data-aos="fade-down"
@@ -71,7 +74,7 @@ const AboutSection1 = ({ data }) => {
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-6 about-content-col">
             <div
               className={`cs_about_content about-right-card ${
                 isInView ? "animate-in" : ""
@@ -178,6 +181,44 @@ const AboutSection1 = ({ data }) => {
           border-color: #23343b !important;
         }
 
+        /* Vertical alignment for about section */
+        .about-section-row {
+          display: flex;
+          align-items: center;
+        }
+
+        .about-image-col {
+          display: flex;
+          align-items: center;
+        }
+
+        .about-content-col {
+          display: flex;
+          align-items: center;
+        }
+
+        .cs_about_thumb {
+          width: 100%;
+          position: relative;
+        }
+
+        .about-image-wrapper {
+          width: 100%;
+          padding: 8px;
+          background-color: #23343B;
+          border-radius: 12px;
+          display: inline-block;
+        }
+
+        .about-main-image {
+          width: 100%;
+          height: auto;
+          border: 6px solid #23343B;
+          border-radius: 8px;
+          object-fit: cover;
+          display: block;
+        }
+
         /* About Section Scroll Animations */
         .about-left-card {
           opacity: 0;
@@ -227,6 +268,16 @@ const AboutSection1 = ({ data }) => {
 
         /* Mobile Responsiveness */
         @media (max-width: 991.98px) {
+          .about-section-row {
+            flex-direction: column;
+          }
+
+          .about-image-col,
+          .about-content-col {
+            width: 100%;
+            align-items: flex-start;
+          }
+
           .about-left-card,
           .about-right-card {
             margin-bottom: 2rem;

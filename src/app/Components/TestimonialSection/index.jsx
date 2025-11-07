@@ -80,9 +80,6 @@ const TestimonialSection = ({ data }) => {
                               </p>
                             </div>
                             <div className="cs_avatar cs_style_1">
-                              <div className="cs_avatar_thumbnail cs_center">
-                              <Image src={testimonial.avatar} alt="img" width={73} height={73}   />
-                              </div>
                               <div className="cs_avatar_info">
                                 <h3 className="cs_avatar_title">
                                   {testimonial.name}

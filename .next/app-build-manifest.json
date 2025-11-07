@@ -17,10 +17,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/(innerpage)/service/page": [
+    "/(innerpage)/doctors/doctor-details/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(innerpage)/service/page.js"
+      "static/chunks/app/(innerpage)/doctors/doctor-details/page.js"
     ],
     "/(innerpage)/layout": [
       "static/chunks/webpack.js",
@@ -31,6 +31,21 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(innerpage)/about/page.js"
+    ],
+    "/(innerpage)/service/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(innerpage)/service/page.js"
+    ],
+    "/(innerpage)/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(innerpage)/contact/page.js"
+    ],
+    "/(innerpage)/referrals/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(innerpage)/referrals/page.js"
     ]
   }
 }

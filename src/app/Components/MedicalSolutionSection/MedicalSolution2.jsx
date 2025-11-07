@@ -39,7 +39,7 @@ const MedicalSolution2 = ({ data }) => {
   return (
     <>
       <div className="container">
-        <div className="row cs_gap_y_40">
+        <div className="row cs_gap_y_40 cs_vertical_center">
           <div className="col-lg-6">
             <div className="cs_solution_content_wrapper">
               <SectionHeading
@@ -83,7 +83,7 @@ const MedicalSolution2 = ({ data }) => {
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-6 d-flex align-items-center justify-content-center cs_thumbnail_wrapper_vc">
             <div className="cs_solution_thumbnail">
               <Image src={data.thumbnailSrc} alt="img" width={686} height={649} />
             </div>
@@ -92,6 +92,26 @@ const MedicalSolution2 = ({ data }) => {
       </div>
 
       <style jsx>{`
+        /* Vertically center row for desktop */
+        .cs_vertical_center {
+          display: flex;
+          align-items: center;
+        }
+        @media (max-width: 991.98px) {
+          .cs_vertical_center {
+            flex-direction: column;
+            align-items: stretch;
+          }
+          .cs_thumbnail_wrapper_vc {
+            display: block !important; /* fallback to original stacking for mobile */
+          }
+        }
+        .cs_thumbnail_wrapper_vc {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+        }
         .cs_expandable_item {
           padding: 15px;
           border-radius: 5px;
@@ -142,20 +162,20 @@ const MedicalSolution2 = ({ data }) => {
             margin-top: 2rem;
             text-align: center;
           }
-          
+
           .cs_solution_thumbnail img {
             max-width: 100%;
             height: auto;
           }
-          
+
           .cs_expandable_item {
             padding: 14px;
           }
-          
+
           .cs_expandable_header {
             gap: 14px;
           }
-          
+
           .service-title {
             font-size: 1rem;
           }
@@ -165,25 +185,25 @@ const MedicalSolution2 = ({ data }) => {
           .cs_solution_thumbnail {
             margin-top: 1.5rem;
           }
-          
+
           .cs_solution_thumbnail img {
             width: 100%;
             max-width: 400px;
           }
-          
+
           .cs_expandable_item {
             padding: 12px;
             margin-bottom: 8px;
           }
-          
+
           .cs_expandable_header {
             gap: 12px;
           }
-          
+
           .service-title {
             font-size: 0.9rem;
           }
-          
+
           .cs_expandable_content {
             padding: 12px;
             font-size: 0.9rem;
@@ -194,36 +214,36 @@ const MedicalSolution2 = ({ data }) => {
           .cs_solution_thumbnail {
             margin-top: 1rem;
           }
-          
+
           .cs_solution_thumbnail img {
             width: 100%;
             max-width: 350px;
           }
-          
+
           .cs_expandable_item {
             padding: 10px;
             margin-bottom: 6px;
           }
-          
+
           .cs_expandable_header {
             gap: 10px;
           }
-          
+
           .service-title {
             font-size: 0.85rem;
             line-height: 1.3;
           }
-          
+
           .cs_expandable_content {
             padding: 10px;
             font-size: 0.85rem;
             line-height: 1.4;
           }
-          
+
           .cs_tab_link_icon_left {
             width: 20px;
           }
-          
+
           .cs_tab_link_icon_right {
             width: 22px;
             height: 22px;

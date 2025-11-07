@@ -1,8 +1,16 @@
 import { NextResponse } from 'next/server';
 import sgMail from '@sendgrid/mail';
 
-// Set SendGrid API key
-sgMail.setApiKey('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');
+// Set SendGrid API key from environment variable
+const sendGridApiKey = process.env.SENDGRID_API_KEY;
+const recipientEmail = process.env.CONTACT_FORM_EMAIL || 'Referrals@healnexxt.com';
+const senderEmail = process.env.SENDGRID_FROM_EMAIL || 'Referrals@healnexxt.com';
+
+if (!sendGridApiKey) {
+  console.error('SENDGRID_API_KEY is not set in environment variables');
+}
+
+sgMail.setApiKey(sendGridApiKey || '');
 
 export async function POST(request) {
   try {
@@ -25,10 +33,18 @@ export async function POST(request) {
       );
     }
 
+    // Validate SendGrid API key is set
+    if (!sendGridApiKey) {
+      return NextResponse.json(
+        { error: 'Email service is not configured. Please contact the administrator.' },
+        { status: 500 }
+      );
+    }
+
     // Create email message
     const msg = {
-      to: 'ibrahimmohsin37970@gmail.com',
-      from: 'ibrahimmohsin37970@gmail.com', // Use your verified email for testing
+      to: recipientEmail,
+      from: senderEmail, // Must be a verified sender in SendGrid
       subject: `Contact Form: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

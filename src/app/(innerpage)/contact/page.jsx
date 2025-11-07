@@ -7,13 +7,14 @@ import React from 'react';
 const headingData = {
     backgroundImage: '/assets/img/page_heading_bg.jpg',
     title: 'Contact Us',
+    color: '#ffffff',
   };
   
   const contactData = {
     sectionSubtitle: 'CONTACT US',
     SectionTitle: 'Contact Us Directly <br />For Whatever you Need',
     teethShapeImg: '/assets/img/icons/hero_shape_3.png',
-    contactImg: '/assets/img/contact_2.png',
+    contactImg: '/assets/img/specialist-4.png',
     iconBox: {
       style: 'cs_style_4',
       icon: '/assets/img/icons/call_icon_1.png',
@@ -39,7 +40,7 @@ const page = () => {
         <div style={{backgroundColor: '#EADFD4'}}>
       <Section
         className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/page_heading_bg.jpg"
+        backgroundImage="/assets/img/contact-banner.png"
       >
         <PageHeading data={headingData} />
       </Section>

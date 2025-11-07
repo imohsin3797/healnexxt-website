@@ -107,10 +107,10 @@ const HeroSection1 = ({ data }) => {
                       btnUrl={data.btnHref}
                       variant={"cs_btn cs_style_1 cs_color_1"}
                     />
-                    <a className="cs_video_open" onClick={handelClick}>
+                    {/* <a className="cs_video_open" onClick={handelClick}>
                       <span className="cs_player_btn cs_center"><span /></span>
                       <span className="cs_play_btn_text">{data.BtnText1}</span>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               )}

@@ -1,10 +1,5 @@
 'use client';
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaPinterestP,
-  FaTwitter,
-} from "react-icons/fa";
+// Social media icons removed - no longer needed
 import Slider from "react-slick";
 import SectionHeading from "../SectionHeading";
 import Spacing from "../Spacing";
@@ -98,36 +93,18 @@ const TeamSection = ({ data, bgColor, variant, hr }) => {
                           bgColor ? "cs_blue_bg" : "cs_accent_bg "
                         }`}
                       />
-                      <Link href={item.link} className="cs_team_thumbnail">
+                      {/* <Link href={item.link} className="cs_team_thumbnail"> */}
+                      <div className="cs_team_thumbnail">
                       <Image src={item.imageUrl} alt="img" width={306} height={429}   />
-                      </Link>
+                      </div>
+                      {/* </Link> */}
                       <div className="cs_team_bio">
                         <h3 className="cs_team_title cs_extra_bold mb-0">
-                          <Link href={item.link}>{item.name}</Link>
+                          {/* <Link href={item.link}>{item.name}</Link> */}
+                          <span>{item.name}</span>
                         </h3>
                         <p className="cs_team_subtitle">{item.profession}</p>
-                        <div className="cs_social_btns cs_style_1">
-                          <Link href={item.facebook} className="cs_center">
-                            <i>
-                              <FaFacebookF />
-                            </i>
-                          </Link>
-                          <Link href={item.pinterest} className="cs_center">
-                            <i>
-                              <FaPinterestP />
-                            </i>
-                          </Link>
-                          <Link href={item.twitter} className="cs_center">
-                            <i>
-                              <FaTwitter />
-                            </i>
-                          </Link>
-                          <Link href={item.instagram} className="cs_center">
-                            <i>
-                              <FaInstagram />
-                            </i>
-                          </Link>
-                        </div>
+                        {/* Social media icons removed */}
                       </div>
                     </div>
                   </div>
@@ -158,6 +135,24 @@ const TeamSection = ({ data, bgColor, variant, hr }) => {
         .team-title-section.animate-in {
           opacity: 1;
           transform: translateY(0);
+        }
+
+        /* Center all text in team cards on hover */
+        .cs_team.cs_style_1:hover .cs_team_bio {
+          text-align: center;
+        }
+
+        .cs_team.cs_style_1:hover .cs_team_title {
+          text-align: center;
+        }
+
+        .cs_team.cs_style_1:hover .cs_team_title span {
+          text-align: center;
+          display: block;
+        }
+
+        .cs_team.cs_style_1:hover .cs_team_subtitle {
+          text-align: center;
         }
       `}</style>
     </div>

@@ -1,22 +1,9 @@
 "use client"
-import { useState } from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import SectionHeading from "../SectionHeading";
-import VideoModal from "../VideoSection/Modal";
 import Image from "next/image";
 
 const About = ({ data }) => {
-  const [toggle, setToggle] = useState(false);
-  const [iframeSrc, setIframeSrc] = useState("about:blank");
-
-  const handelClick = () => {
-    setIframeSrc(`${data.videoUrl}`);
-    setToggle(!toggle);
-  };
-  const handelClose = () => {
-    setIframeSrc("about:blank");
-    setToggle(!toggle);
-  };
 
   const brandBg = "#23343B";
   const brandFg = "#ffffff";
@@ -28,22 +15,11 @@ const About = ({ data }) => {
           <div className="col-lg-6">
             <div className="cs_about_thumb">
               <div className="cs_about_thumb_1">
-                <Image src={data.headImgUrl} alt="img" width={444} height={505} />
-                <a
-                  className="cs_about_player_btn cs_video_open"
-                  onClick={handelClick}
-                >
-                  <span className="cs_player_btn cs_center">
-                    <span />
-                  </span>
-                  <span className="cs_about_play_btn_text">
-                    {data.videoText}
-                  </span>
-                </a>
+                <Image src={data.headImgUrl} alt="img" width={600} height={680} />
               </div>
 
               <div className="cs_about_thumb_2">
-                <Image src="/assets/img/about_img_2.jpg" alt="img" width={372} height={289} />
+                <Image src="/assets/img/about-2.png" alt="img" width={500} height={390} className="about-second-image" />
                 <Image src="/assets/img/icons/about_shape_1.png" className="cs_about_thumb_shape_2" alt="img" width={129} height={128} />
               </div>
 
@@ -124,6 +100,13 @@ const About = ({ data }) => {
         iframeSrc={iframeSrc}
         handelClose={handelClose}
       /> */}
+      
+      <style jsx>{`
+        .about-second-image {
+          border: 4px solid #23343B;
+          border-radius: 8px;
+        }
+      `}</style>
     </>
   );
 };

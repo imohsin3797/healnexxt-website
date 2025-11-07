@@ -15,7 +15,7 @@ import ProcessSection from '../Components/ProcessSection';
 
 const HeroData = {
   backgroundImage: '/assets/img/hero-image.png',
-  backgroundImage2: '/assets/img/hero-3.jpg',
+  backgroundImage2: '/assets/img/hero-3.png',
   backgroundImage3: '/assets/img/hero-2.jpg.webp',
 
   title: 'The Future of Connected Care',
@@ -71,15 +71,15 @@ const HeroData = {
     aboutText:
       'Healnexxt is redefining healthcare accessibility by seamlessly connecting patients with specialized services—right where they need them. Through our innovative, on-demand model, we bring expert care directly to homes, ensuring primary care providers have a trusted network of specialists to support comprehensive treatment.',
     experienceYears: '26+',
-    experienceTitle: 'Experience',
+    experienceTitle: 'Years of Experience',
   
     iconUrl: '/assets/img/icons/about_icon_1.png',
     title: 'Patient-Centered Care',
-    imgUrl: '/assets/img/about_img_4.jpg',
+    imgUrl: '/assets/img/patient-care.png',
   
     iconUrl2: '/assets/img/icons/about_icon_2.png',
     title2: 'Specialist Network',
-    imgUrl2: '/assets/img/about_img_5.jpg',
+    imgUrl2: '/assets/img/specialist-network.png',
   
     aboutIconboxSubtitle:
       'With transparent communication and streamlined coordination, we work toward delivering high-quality, patient-centered care with efficiency and ease.',
@@ -131,7 +131,7 @@ const HeroData = {
         subtitle:
           'Expert dermatological care for skin conditions,<br> mole evaluations, and comprehensive skin health assessments',
         link: '/service/service-details',
-        imageSrc: '/assets/img/service_1.png',
+        imageSrc: '/assets/img/derm.jpg',
       },
       {
         iconSrc: '/assets/img/icons/service_icon_15.png',
@@ -139,7 +139,7 @@ const HeroData = {
         subtitle:
           'Surgical wounds, traumatic injuries, burns, diabetic wounds,<br> pressure injuries, and venous & arterial wounds',
         link: '/service/service-details',
-        imageSrc: '/assets/img/service_1.png',
+        imageSrc: '/assets/img/wound.jpg',
       },
       {
         iconSrc: '/assets/img/icons/service_icon_17.png',
@@ -147,7 +147,7 @@ const HeroData = {
         subtitle:
           'Comprehensive mental health and behavioral health services<br> with compassionate, personalized treatment approaches',
         link: '/service/service-details',
-        imageSrc: '/assets/img/service_1.png',
+        imageSrc: '/assets/img/pych-care.jpg',
       },
       {
         iconSrc: '/assets/img/icons/service_icon_18.png',
@@ -155,7 +155,7 @@ const HeroData = {
         subtitle:
           'Immediate medical attention for acute conditions<br> delivered promptly to your location when you need it most',
         link: '/service/service-details',
-        imageSrc: '/assets/img/service_1.png',
+        imageSrc: '/assets/img/urgent-care.jpg',
       },
     ],
   };
@@ -280,7 +280,7 @@ const HeroData = {
       {
         name: 'Dr. Norma Pedric',
         profession: 'Neurologist',
-        imageUrl: '/assets/img/team_1.jpg',
+        imageUrl: '/assets/img/specialist-1.png',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',
@@ -290,7 +290,7 @@ const HeroData = {
       {
         name: 'Dr. James Lewis',
         profession: 'Neurologist',
-        imageUrl: '/assets/img/team_3.jpg',
+        imageUrl: '/assets/img/specialist-2.png',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',
@@ -300,7 +300,7 @@ const HeroData = {
       {
         name: 'Dr. Sophia Anderson',
         profession: 'Neurologist',
-        imageUrl: '/assets/img/team_4.jpg',
+        imageUrl: '/assets/img/specialist-4.png',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',
@@ -310,7 +310,7 @@ const HeroData = {
       {
         name: 'Dr. Michael Thompson',
         profession: 'Neurologist',
-        imageUrl: '/assets/img/team_5.jpg',
+        imageUrl: '/assets/img/specialist-5.png',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',
@@ -320,7 +320,27 @@ const HeroData = {
       {
         name: 'Dr. David Wilson',
         profession: 'Neurologist',
-        imageUrl: '/assets/img/team_6.jpg',
+        imageUrl: '/assets/img/specialist-6.png',
+        link: '/doctors/doctor-details',
+        facebook: '/',
+        pinterest: '/',
+        twitter: '/',
+        instagram: '/',
+      },
+      {
+        name: 'Dr. David Wilson',
+        profession: 'Neurologist',
+        imageUrl: '/assets/img/specialist-7.png',
+        link: '/doctors/doctor-details',
+        facebook: '/',
+        pinterest: '/',
+        twitter: '/',
+        instagram: '/',
+      },
+      {
+        name: 'Dr. David Wilson',
+        profession: 'Neurologist',
+        imageUrl: '/assets/img/specialist-8.png',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',
@@ -334,25 +354,25 @@ const HeroData = {
     thumbnail: '/assets/img/review.png',
     testimonials: [
       {
-        rating: 2,
+        rating: 5,
         subtitle:
-          'We are privileged to work with hundreds of future-thinking medial, including many of the world\'s top hardware, dental, and brands , feel safe and comfortable in establishing.',
+          'Compared to standard home health and wound-care services, the quality is on a different level. Healnexxt doesn\'t just treat wounds - they bring coordinated care, with transparency, professionalism, and compassion, directly into your home. My mom loves Dr. Mag and is very comfortable with all of the staff that has visited her. I can\'t recommend them enough.',
         avatar: '/assets/img/avatar_1.png',
-        name: 'Dr. Mehara Bara',
-        position: 'Dental Manager',
+        name: 'Jaime McComas',
+        position: 'Patient',
       },
       {
-        rating: 4,
+        rating: 5,
         subtitle:
-          'We are privileged to work with hundreds of future-thinking medial, including many of the world\'s top hardware, dental, and brands , feel safe and comfortable in establishing.',
+          'What sets them apart is they are truly on-demand at your home when the patient needs them. Dr. Mag came out immediately, evaluated my mom in person, and wrote wound-care orders on site- something I didn\'t even know was possible. Because of Healnexxt, her health and healing have improved significantly. She has not returned to the hospital!',
         avatar: '/assets/img/avatar_2.png',
         name: 'John Doe',
         position: 'Healthcare Professional',
       },
       {
-        rating: 3,
+        rating: 5,
         subtitle:
-          'We are privileged to work with hundreds of future-thinking medial, including many of the world\'s top hardware, dental, and brands , feel safe and comfortable in establishing.',
+          'Healnexxt has been life-changing for our family. My mom is 75, fragile and lives alone. Over the past year, she\'s been hospitalized six times, largely due to falls and the wounds (including bedsores) that followed. We knew she desperately needed better care at home but didn\'t know where to look. Then we found Healnexxt!',
         avatar: '/assets/img/avatar_2.png',
         name: 'John Doe',
         position: 'Healthcare Professional',

@@ -12,6 +12,19 @@ import {
 } from 'react-icons/fa6';
 import { useState, useEffect, useRef } from 'react';
 
+// Nextdoor Icon Component
+const NextdoorIcon = () => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M17.203 9.266a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75V9.266ZM12.75 2.016a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v20.734a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75V2.016ZM8.25 6.516a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v16.234a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75V6.516ZM3.75 11.266a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v11.484a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75V11.266Z" />
+  </svg>
+);
+
 const Footer = () => {
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef(null);
@@ -48,18 +61,20 @@ const Footer = () => {
       'Monday - Friday<br />8:00am - 5:00pm',
     contactText2: '211 E Main St,<br />Lakeland, FL 33801',
     contactText3: 'info@healnexxt.com<br />Phone: (844) HEAL-4-ME<br />Fax: (833) 812-1427',
-    facebookHref: '/',
-    linkedinHref: '/',
-    twitterHref: '/',
-    instagramHref: '/',
+    facebookHref: 'https://www.facebook.com/profile.php?id=61581617113747',
+    linkedinHref: 'https://www.linkedin.com/company/healnexxt-health-solutions/',
+    twitterHref: 'https://x.com/healnexxt',
+    instagramHref: 'https://www.instagram.com/healnexxt/',
+    nextdoorHref: 'https://nextdoor.com/page/healnexxt-health-solutions',
+    nextdoorIconSrc: '/assets/img/nextdoor.png',
     widgets: [
       {
         title: 'Services',
         links: [
           { href: '/service', text: 'Wound Care Specialties' },
           { href: '/service', text: 'Dermatology Services' },
-          { href: '/service', text: 'Connected Care Network' },
-          { href: '/service', text: 'Continued Support' },
+          { href: '/service', text: 'Psych and Behavior Care' },
+          { href: '/service', text: 'Urgent Care' },
           { href: '/referrals', text: 'Referrals' },
         ],
       },
@@ -164,6 +179,11 @@ const Footer = () => {
                   <Link href={data.instagramHref} className="cs_center social-btn">
                     <i>
                       <FaInstagram />
+                    </i>
+                  </Link>
+                  <Link href={data.nextdoorHref} className="cs_center social-btn">
+                    <i>
+                      <Image src={data.nextdoorIconSrc || '/assets/img/nextdoor.png'} alt="Nextdoor" width={20} height={20} />
                     </i>
                   </Link>
                 </div>

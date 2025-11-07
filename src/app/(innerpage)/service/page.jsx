@@ -1,3 +1,4 @@
+"use client";
 import PageHeading from '@/app/Components/PageHeading';
 import Section from '@/app/Components/Section';
 import MedicalSolution from '@/app/Components/MedicalSolutionSection/MedicalSolution2';
@@ -5,7 +6,7 @@ import OverlapGuard from '@/app/Components/OverlapGuard'; // client-only style i
 import ThreeIcon from '@/app/Components/ThreeIcon/ThreeIcon';
 import React from 'react';
 
-const headingData = { title: 'Services' };
+const headingData = { title: 'Services', color: '#ffffff' };
 
 const threeIconData = {
   sectionSubtitle: "WHY CHOOSE US",
@@ -35,7 +36,7 @@ const medicalSolutionData = {
   title: 'Comprehensive Healthcare Services',
   description:
     'Healnexxt provides expert care across four key service areas, delivering specialized medical attention right to your doorstep with advanced technology and compassionate support. Our comprehensive approach ensures patients receive seamless, high-quality care that drives better outcomes.',
-  thumbnailSrc: '/assets/img/medical_solution_3.png',
+  thumbnailSrc: '/assets/img/about-3.webp',
   links: [
     {
       href: '/service/service-details',
@@ -67,11 +68,36 @@ const page = () => {
       <OverlapGuard />
 
       <Section
-        className={'cs_page_heading cs_bg_filed cs_center'}
-        backgroundImage="/assets/img/page_heading_bg.jpg"
+        className={'cs_page_heading cs_bg_filed cs_center services-page-banner'}
+        backgroundImage="/assets/img/services.jpg.avif"
       >
         <PageHeading data={headingData} />
       </Section>
+      
+      <style jsx>{`
+        .services-page-banner .container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          text-align: right;
+        }
+        
+        .services-page-banner .cs_page_title {
+          text-align: right;
+          -webkit-text-stroke: 1px #23343B;
+          text-stroke: 1px #23343B;
+        }
+        
+        .services-page-banner .breadcrumb {
+          justify-content: flex-end;
+        }
+        
+        .services-page-banner .breadcrumb a,
+        .services-page-banner .breadcrumb span {
+          -webkit-text-stroke: 0.5px #23343B;
+          text-stroke: 0.5px #23343B;
+        }
+      `}</style>
 
       {/* Three Icon Section */}
       <Section
@@ -105,6 +131,36 @@ const page = () => {
       >
         <MedicalSolution data={medicalSolutionData} />
       </Section>
+      
+      <style jsx>{`
+        .services-solution .row {
+          display: flex;
+          align-items: center;
+        }
+        
+        .services-solution .col-lg-6 {
+          display: flex;
+          align-items: center;
+        }
+        
+        .services-solution .col-lg-6:first-child {
+          justify-content: flex-start;
+        }
+        
+        .services-solution .col-lg-6:last-child {
+          justify-content: center;
+        }
+        
+        .services-solution .cs_solution_content_wrapper {
+          width: 100%;
+        }
+        
+        .services-solution .cs_solution_thumbnail {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      `}</style>
     </div>
   );
 };

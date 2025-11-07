@@ -10,21 +10,22 @@ const PageHeading = ({ data }) => {
       .filter((segment) => segment !== "");
     setUrlSegments(pathSegments);
   }, []);
+  const textColor = data?.color || '#23343B';
   return (
     <div className="container">
-      <h1 className="cs_page_title" style={{color: '#23343B'}}>{data?.title}</h1>
+      <h1 className="cs_page_title" style={{color: textColor}}>{data?.title}</h1>
       <ol className="breadcrumb text-capitalize">
         <li className="breadcrumb-item">
-          <Link href="/" style={{color: '#23343B', ':hover': {color: '#23343B'}}}>Home</Link>
+          <Link href="/" style={{color: textColor, ':hover': {color: textColor}}}>Home</Link>
         </li>
         {urlSegments.map((segment, index) => (
           <li key={index} className="breadcrumb-item">
             {index < urlSegments.length - 1 ? (
-              <Link href={`/${urlSegments.slice(0, index + 1).join("/")}`} style={{color: '#23343B', ':hover': {color: '#23343B'}}}>
+              <Link href={`/${urlSegments.slice(0, index + 1).join("/")}`} style={{color: textColor, ':hover': {color: textColor}}}>
                 {segment}
               </Link>
             ) : (
-              <span className="active" style={{color: '#23343B'}}>{segment}</span>
+              <span className="active" style={{color: textColor}}>{segment}</span>
             )}
           </li>
         ))}
