@@ -9,7 +9,7 @@ import Map from '@/app/Components/Map/Map';
 import React from 'react';
 
 const headingData = {
-    title: 'About Page',
+    title: 'About',
     color: '#ffffff'
   };
   

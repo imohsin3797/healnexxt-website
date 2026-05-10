@@ -1,7 +1,8 @@
 {
-  "/(home1)/page": "app/(home1)/page.js",
-  "/(innerpage)/contact/page": "app/(innerpage)/contact/page.js",
-  "/(innerpage)/referrals/page": "app/(innerpage)/referrals/page.js",
-  "/(innerpage)/doctors/doctor-details/page": "app/(innerpage)/doctors/doctor-details/page.js",
-  "/(innerpage)/about/page": "app/(innerpage)/about/page.js"
+  "/(innerpage)/about/page": "app/(innerpage)/about/page.js",
+  "/(innerpage)/service/behavioral-health-telehealth/page": "app/(innerpage)/service/behavioral-health-telehealth/page.js",
+  "/(innerpage)/service/advanced-wound-care/page": "app/(innerpage)/service/advanced-wound-care/page.js",
+  "/(innerpage)/service/page": "app/(innerpage)/service/page.js",
+  "/(innerpage)/service/dermatology-services/page": "app/(innerpage)/service/dermatology-services/page.js",
+  "/(home1)/page": "app/(home1)/page.js"
 }
